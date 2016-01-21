@@ -55,6 +55,7 @@
 				.handleMouseover()
 				.handleMouseout()
 				.handleMousemove();
+      return this;
 		},
 		destroy: function() {
 			utils
@@ -63,9 +64,11 @@
 				.removeEvent(this.icon, 'mouseover', this.handledEvents.mouseover)
 				.removeEvent(this.icon, 'mouseout', this.handledEvents.mouseout)
 				.removeEvent(this.medium.element, 'mousemove', this.handledEvents.mousemove);
+      return this;
 		},
 		hide: function() {
 			utils.hide(this.icon);
+      return this;
 		},
 		handleDragstart: function() {
 
@@ -154,6 +157,7 @@
 			style.top = top + 'px';
 
 			utils.show(this.icon);
+      return this;
 		},
 		cleanCanvas: function() {
 			var target,
@@ -172,6 +176,7 @@
 				}
 			}
 			utils.detachNode(this.icon);
+      return this;
 		}
 	};
 })(Medium);
